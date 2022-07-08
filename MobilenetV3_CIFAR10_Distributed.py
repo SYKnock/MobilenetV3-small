@@ -2,7 +2,7 @@ import argparse
 import torch
 from tools.data_distributed import CIFAR10_distributed_dataloader_generator
 from tools.train_classifier_distributed import train
-from apex.parallel import DistribuedDataParallel as DDP
+from apex.parallel import DistributedDataParallel as DDP
 import torch.multiprocessing as mp
 from tools.utils import set_seed
 import torchvision
