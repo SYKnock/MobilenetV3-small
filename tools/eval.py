@@ -9,7 +9,7 @@ def evaluation(model, data_loader, device):
     total = 0
 
     with torch.no_grad():
-        for (features, targets) in enumerate(data_loader):
+        for batch_idx, (features, targets) in enumerate(data_loader):
             features = features.to(device)
             targets = targets.to(device)
             output = model(features)
