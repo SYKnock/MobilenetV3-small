@@ -68,6 +68,7 @@ def train(model, device, epoch, wandb_name,
         
         total_time = (time.time() - start_time) / 60
         print(f'======Test acc: {test_accuracy:.4f}% [Total time: {total_time:.2f}min]======\n\n')
+        wandb.finish()
 
     
     
