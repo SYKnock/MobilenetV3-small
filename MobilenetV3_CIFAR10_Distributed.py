@@ -92,7 +92,7 @@ def main():
     args.WORLD_SIZE = args.NUM_NODE * ngpus_per_node
     os.environ['MASTER_ADDR'] = '127.0.0.1'
     os.environ['MASTER_PORT'] = '30000'
-    mp.spawn(train, nprocs=ngpus_per_node, args=(args,))
+    mp.spawn(main_worker, nprocs=ngpus_per_node, args=(args,))
 
 
 if __name__ == "__main__":
